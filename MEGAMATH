@@ -1,0 +1,181 @@
+//VARIÁVEIS---------------------------------------------------------
+{
+  let telamenu;
+  let telainfo;
+  let telacred;
+  let telaconstrução;
+  var xbot;
+  var ybotiniciar;
+  var ybotinfo;
+  var ybotcred;
+  var alturabot;
+  var largurabot;
+  var tela = 0;
+}
+
+//FUNCTION PRELOAD--------------------------------------------------
+
+function preload() {
+  telamenu = loadImage('tela inicial.png');
+  telainfo = loadImage('tela info.png');
+  telacred = loadImage('tela cred.png');
+  telainiciar = loadImage('telaconstrução.png')
+}
+
+//FUNCTION SETUP----------------------------------------------------
+
+function setup() {
+  createCanvas(1200, 700);
+  xbot = 400;
+  ybotiniciar = 200;
+  ybotinfo = 350;
+  ybotcred = 500
+  alturabot = 100;
+  largurabot = 400;
+}
+
+//FUNCTION DRAW-----------------------------------------------------
+
+function draw() {
+  background(telamenu);
+  
+  textSize(72);
+  
+  
+//DETECTA BOTÃO INICIAR---------------------------------------------
+
+if(tela == 0){
+  
+  if(mouseX > xbot && mouseX < xbot+400 && mouseY > ybotiniciar && mouseY < ybotiniciar + alturabot){
+    if(mouseIsPressed){
+    tela = 1
+    }
+    fill(255,0,0);
+  }
+  
+  rect(xbot,ybotiniciar,largurabot,alturabot);
+  fill(0);
+  text("iniciar",xbot+110,275);
+  fill(255,204,0);
+  
+  
+  
+//DETECTA BOTÃO INFORMAÇÕES-----------------------------------------  
+  if(mouseX > xbot && mouseX < xbot+400 && mouseY > ybotinfo && mouseY < ybotinfo + alturabot){
+    if(mouseIsPressed){
+      tela = 2
+    }
+    fill(255,0,0);
+  }
+  
+  rect(xbot,ybotinfo,largurabot,alturabot);
+  fill(0)
+  text("informações", xbot+5,420);
+  fill(255,204,0)  
+  
+  
+//DETECTA BOTÃO CRÉDITOS--------------------------------------------  
+  if(mouseX > xbot && mouseX < xbot+400 && mouseY > ybotcred && mouseY < ybotcred + alturabot){
+    if(mouseIsPressed){
+      tela = 3
+    }
+    fill(255,0,0);
+  }
+  
+  rect(xbot,ybotcred,largurabot,alturabot);
+  fill(0)
+  text("créditos", xbot+70 ,575);
+  fill(255,204,0)
+}
+  
+//TELA INICIAR------------------------------------------------------
+  
+if(tela==1){
+  background(telainiciar)
+  
+  
+
+//BOTÃO VOLTAR------------------------------------------------------
+  
+if(mouseX > 890 && mouseX < 890 + 300 && mouseY > 600 && mouseY < 600 + 90){
+  if(mouseIsPressed){
+    tela = 0
+  }
+  fill(255,0,0)
+}
+  
+  rect(890,600,300,90)
+  fill(0)
+  text("voltar",950,670)
+  fill (255,204,0)  
+}  
+  
+//TELA INFORMAÇÕES--------------------------------------------------
+
+if(tela == 2){
+  background(telainfo)
+  
+  
+  
+//BOTÃO VOLTAR------------------------------------------------------
+  
+if(mouseX > 890 && mouseX < 890 + 300 && mouseY > 600 && mouseY < 600 + 90){
+  if(mouseIsPressed){
+    tela = 0
+  }
+  fill(255,0,0)
+}
+  
+  rect(890,600,300,90)
+  fill(0)
+  text("voltar",950,670)
+  fill (255,204,0)
+}
+    
+//TELA CRÉDITOS-----------------------------------------------------  
+if(tela == 3){
+  background(telacred)
+  
+  
+  
+//BOTÃO VOLTAR------------------------------------------------------
+  
+if(mouseX > 890 && mouseX < 890 + 300 && mouseY > 600 && mouseY < 600 + 90){
+  if(mouseIsPressed){
+    tela = 0
+  }
+  fill(255,0,0)
+}
+  
+  rect(890,600,300,90)
+  fill(0)
+  text("voltar",950,670)
+  fill (255,204,0)
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
